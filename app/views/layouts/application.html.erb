@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= content_for?(:title) ? (t 'service.title', title: yield(:title)) : (t 'service.site_name')  %></title>
+    <meta name="keywords"           content="<%= yield(:meta_keywords).presence || (t 'service.keywords') %>" />
+    <meta name="description"        content="<%= yield(:meta_description).presence || (t 'service.description') %>" />
+    <meta name="robots"             content="noodp" />
+    <meta name="viewport"           content="width=device-width,initial-scale=1.0" />
+    <meta property="og:title"       content="<%= content_for?(:title) ? (t 'service.title', title: yield(:title)) : (t 'service.site_name')  %>" />
+    <meta property="og:description" content="<%= yield(:meta_description).presence || (t 'service.description') %>" />
+    <meta property="og:site_name"   content="<%= t 'service.site_name' %>" />
+    <meta property="og:image"       content="" />
+    <meta property="og:type"        content="website" />
+    <meta property="og:url"         content="" />
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>          
+  </head>
+  <body>
+    <%= render "layouts/header" %>
+    <main>
+      <%= yield %>      
+    </main>
+    <%= render "layouts/footer" %>
+  </body>
+</html>

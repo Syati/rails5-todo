@@ -1,0 +1,6 @@
+ja:
+  service:
+    site_name: "Rails5 Todo"
+    title: "%{title} | Rails5 Todo"
+    description: "これは rails5-todo デスクリプションです"
+    keywords: "todo, sample, rails5"
