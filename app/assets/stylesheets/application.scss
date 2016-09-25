@@ -1,6 +1,7 @@
-@import 'vendor/normalize';
-@import 'vendor/bass/basscss';
+@import 'base/var';
+@import 'vendor/skeleton/skeleton';
 @import 'base/base';
+@import 'base/typography';
 @import 'layout/layout';
 @import 'module/module';
 @import 'state/state';

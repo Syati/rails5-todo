@@ -4,6 +4,10 @@
   width:100%;
   min-height:50px;
   border-bottom: 1px solid;
+  p {
+      margin: 10px;
+      padding: 0;
+  }
 }
 
 #main {
@@ -14,8 +18,27 @@
 #footer {
   text-align: center;
   border-top: 1px solid;
-  position: fixed;
-  bottom: 0px;
   width: 100%;
 }
 
+
+
+.field_with_errors {
+  label {
+    color:red;
+  }
+  input {
+    border-color:red;
+  }
+}
+
+.debug_dump {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  background-color:#eaeaea;
+}
