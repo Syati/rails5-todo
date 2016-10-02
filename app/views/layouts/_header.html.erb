@@ -1,3 +1,17 @@
-<header id="header">
-  <p class="h1"><%= link_to 'Rails5 Todo', root_path %></p>
+<header id="header" class="m-header" >
+    <div class="m-header-title h1">
+      <%= link_to 'Rails5 Todo', root_path %>
+    </div>
+    <div class="m-header-nav">
+      <ul>
+        <% if logged_in? %>
+          <li><%= link_to 'Profile', current_user %></li>
+          <li><%= link_to 'Settings', '#' %></li>
+          <li><%= link_to 'Log out', logout_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to 'Sign up', signup_path %></li>
+          <li><%= link_to 'Log in', login_path %></li>
+        <% end %>
+      </ul>
+    </div>
 </header>
