@@ -2,34 +2,57 @@
 
 .m-header {
   .m-header-title {
-    float:left;
-    width:50%;
-    height:100%;
+    float: left;
+    width: 50%;
+    height: 100%;
     a {
-      display:block;
-      height:100%;
-      padding:10px 10px 10px 20px;
+      display: block;
+      height: 100%;
+      padding: 10px 10px 10px 20px;
     }
   }
 
   .m-header-nav {
-    float:right;
-    width:50%;
-    height:100%;
+    float: right;
+    width: 50%;
+    height: 100%;
 
-    ul {
-      float:right;
+    .m-header-nav-inner {
+      height: 100%;
+    }
+
+    .m-header-menu {
+      width: 100%;
+      float: right;
       list-style: none;
-      height:100%;
-      padding:0 20px 0 0;
-      margin:0;
+      height: 100%;
+      padding: 0 20px 0 0;
+      margin: 0;
 
-      li {
+      .m-header-menu-item {
+        float: right;
+        width: 20%;
         height: 100%;
         display: inline-block;
         margin: 0;
-        text-align: pcenter;
+        text-align: center;
         padding: 10px;
+        cursor: pointer;
+
+        ul {
+          margin: 1.5rem 0 1.5rem 2rem;
+
+          li {
+            &:first-child{
+              border-top: 1px solid;
+            }
+            display: block;
+            text-align: left;
+            padding: 10px 0 10px 0;
+            border-bottom: 1px solid;
+            margin: 0;
+          }
+        }
       }
     }
   }
