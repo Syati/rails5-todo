@@ -39,8 +39,8 @@ var Header = React.createClass({
           <a onClick={ this.handleClickSettings }>Settings</a>
           <ul className={ this.state.showMenu ? '' : 'hidden' }>
             <li>hoge</li>
-            <li>hoge</li>
-            <li><a href="/profile">Profile</a></li>
+            <li><a href={'/users/' + this.props.user.id + '/edit'}>Edit</a></li>
+            <li><a href={'/users/' + this.props.user.id}>Profile</a></li>
             <li><a rel="nofollow" data-method="delete" href="/logout">Log out</a></li>            
           </ul>
         </li>
