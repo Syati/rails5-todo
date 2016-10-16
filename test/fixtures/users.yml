@@ -8,6 +8,7 @@ mizuki:
   name: Mizuki Example
   email: mizuki@example.com
   password_digest: <%= User.digest('password') %>
+  admin: true
 
 yamamoto:
   name: Yamamoto Example
